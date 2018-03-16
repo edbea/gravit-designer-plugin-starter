@@ -128,7 +128,8 @@ GSampleProperties.prototype.update = function (document, elements) {
 GSampleProperties.prototype._addRectangle = function() {
     //instantiate a new rectangle using the GRectangle class of the framework
     //it will be added in the position x: 0, y:0, with width: 50, height: 50
-    var rectangle = new GRectangle(0, 0, 50, 50);
+    var rectangle = new GRectangle();
+    rectangle.setBounds(0, 0, 50, 50);
 
     //elements by default are created without fill, so lets add one FillPaintLayer from GStylable
     rectangle.getPaintLayers().appendChild(new GStylable.FillPaintLayer(new GRGBColor([235,235,235]), 1.0));
